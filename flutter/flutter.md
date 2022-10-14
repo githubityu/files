@@ -85,6 +85,15 @@ IndexedSlot
 
 
 
+###### 1.2.  GestureBinding 管理指针事件的 Flutter 框架类 干了啥
+
+> 给
+> platformDispatcher.onPointerDataPacket = _handlePointerDataPacket;
+> _flushPointerEventQueue
+> handlePointerEvent
+> _handlePointerEventImmediately
+> dispatchEvent
+
 
 
 

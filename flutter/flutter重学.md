@@ -4,6 +4,9 @@
 ##### 文章
 [coderzheaven](https://www.coderzheaven.com/)
 
+
+#### Widget 配置  Elements管理   RenderObjects 绘制
+
 #####  1. widget
 
 >widget  描述一个UI元素的配置信息
@@ -42,7 +45,7 @@
 > 一般state不希望暴露，私有，如果要获取，提供一个xxx.of(context)
 > 或者通过GlobalKey获取，由于开销比较大，避免使用
 
-```java
+```dart
     static ScaffoldState? of(BuildContext context) {
     final ScaffoldState? result = context.findAncestorStateOfType<ScaffoldState>();
     return result;
@@ -51,10 +54,10 @@
 
 //定义一个globalKey, 由于GlobalKey要保持全局唯一性，我们使用静态变量存储
 static GlobalKey<ScaffoldState> _globalKey= GlobalKey();
-...
+///...
 Scaffold(
     key: _globalKey , //设置key
-    ...
+    ///...
 )
 
 _globalKey.currentState.openDrawer()
